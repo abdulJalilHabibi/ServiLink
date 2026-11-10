@@ -3,7 +3,6 @@ import { BookingContext } from "./BookingContextObject";
 
 const STORAGE_KEY = "servilink_bookings";
 const STORAGE_FAVORITES_KEY = "servilink_favorites";
-const STORAGE_SERVICES_KEY = "servilink_provider_services";
 
 export const BookingProvider = ({ children }) => {
   // Bookings state
@@ -74,45 +73,6 @@ export const BookingProvider = ({ children }) => {
     return ["pro-1", "pro-2"];
   });
 
-  // Provider's own catalog of services
-  const [providerServices, setProviderServices] = useState(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_SERVICES_KEY);
-      if (saved) return JSON.parse(saved);
-    } catch (e) {
-      console.error("Failed to load provider services", e);
-    }
-    return [
-      {
-        id: "srv-1",
-        title: "Main Circuit Breaker Panel Upgrade",
-        category: "electrical",
-        rate: 55,
-        estimatedHours: "2-3 hours",
-        description: "Replacement of obsolete fuse panels with modern RCCB breaker protection.",
-        active: true
-      },
-      {
-        id: "srv-2",
-        title: "Solar Inverter & Battery Storage Setup",
-        category: "electrical",
-        rate: 65,
-        estimatedHours: "4-6 hours",
-        description: "Hybrid inverter wiring, charge controller setup, and lithium battery calibration.",
-        active: true
-      },
-      {
-        id: "srv-3",
-        title: "24/7 Emergency Blackout Diagnosis",
-        category: "electrical",
-        rate: 45,
-        estimatedHours: "1-2 hours",
-        description: "Rapid isolation of shorted circuits, burnt conduits, or generator switch issues.",
-        active: true
-      }
-    ];
-  });
-
   // Modals state
   const [selectedProForBooking, setSelectedProForBooking] = useState(null);
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -146,14 +106,6 @@ export const BookingProvider = ({ children }) => {
       console.error("Failed to persist favorites", e);
     }
   }, [favorites]);
-
-  useEffect(() => {
-    try {
-      localStorage.setItem(STORAGE_SERVICES_KEY, JSON.stringify(providerServices));
-    } catch (e) {
-      console.error("Failed to persist provider services", e);
-    }
-  }, [providerServices]);
 
   const addBooking = (newBookingData) => {
     const randomCode = Math.floor(100000 + Math.random() * 900000);
@@ -208,29 +160,6 @@ export const BookingProvider = ({ children }) => {
 
   const isFavorite = (proId) => favorites.includes(proId);
 
-  // Provider service management
-  const addProviderService = (service) => {
-    const newSrv = {
-      id: `srv-${Date.now()}`,
-      active: true,
-      ...service
-    };
-    setProviderServices((prev) => [newSrv, ...prev]);
-    showToast("New service offering published!", "success");
-  };
-
-  const updateProviderService = (id, updatedFields) => {
-    setProviderServices((prev) =>
-      prev.map((s) => (s.id === id ? { ...s, ...updatedFields } : s))
-    );
-    showToast("Service details updated!", "success");
-  };
-
-  const deleteProviderService = (id) => {
-    setProviderServices((prev) => prev.filter((s) => s.id !== id));
-    showToast("Service offering removed", "info");
-  };
-
   // Booking modal actions
   const openBookingModalWithPro = (pro) => {
     setSelectedProForBooking(pro);
@@ -270,10 +199,6 @@ export const BookingProvider = ({ children }) => {
         favorites,
         toggleFavorite,
         isFavorite,
-        providerServices,
-        addProviderService,
-        updateProviderService,
-        deleteProviderService,
         selectedProForBooking,
         isBookingModalOpen,
         openBookingModalWithPro,

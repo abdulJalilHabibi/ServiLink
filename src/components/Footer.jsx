@@ -117,8 +117,8 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-1.5 text-xs text-slate-500">
               <li>
-                <Link to="/dashboard/provider" className="hover:text-indigo-600 transition">
-                  Technician Portal
+                <Link to="/contact" className="hover:text-indigo-600 transition">
+                  Join as Technician
                 </Link>
               </li>
               <li>
