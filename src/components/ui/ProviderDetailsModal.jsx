@@ -8,7 +8,6 @@ import {
   Zap,
   Award,
   CheckCircle2,
-  Heart,
   PhoneCall,
   Calendar
 } from "lucide-react";
@@ -18,15 +17,12 @@ export const ProviderDetailsModal = () => {
   const {
     selectedProForDetails,
     closeProDetails,
-    openBookingModalWithPro,
-    isFavorite,
-    toggleFavorite
+    openBookingModalWithPro
   } = useBooking();
 
   if (!selectedProForDetails) return null;
 
   const pro = selectedProForDetails;
-  const favorited = isFavorite(pro.id);
   const firstName = pro.name ? pro.name.split(" ")[0] : "Pro";
 
   const handleBook = () => {
@@ -57,7 +53,7 @@ export const ProviderDetailsModal = () => {
               MODAL TOP HEADER
               ======================================================== */}
           <div className="relative bg-gradient-to-br from-indigo-700 via-indigo-600 to-blue-700 text-white p-5 sm:p-6 shrink-0">
-            {/* Action Bar (Badge + Favorite + Close) */}
+            {/* Action Bar (Badge + Close) */}
             <div className="flex items-center justify-between gap-3 mb-4">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 text-white text-xs font-bold uppercase tracking-wider backdrop-blur-md border border-white/20">
                 <ShieldCheck className="w-4 h-4 text-emerald-300" />
@@ -65,20 +61,6 @@ export const ProviderDetailsModal = () => {
               </span>
 
               <div className="flex items-center gap-2">
-                <button
-                  type="button"
-                  onClick={() => toggleFavorite(pro.id)}
-                  className={`p-2 rounded-xl transition active:scale-95 border ${
-                    favorited
-                      ? "bg-rose-500 border-rose-400 text-white shadow-sm"
-                      : "bg-white/15 border-white/20 text-white hover:bg-white/25"
-                  }`}
-                  title={favorited ? "Remove from Favorites" : "Save to Favorites"}
-                  aria-label="Toggle favorite"
-                >
-                  <Heart className={`w-4 h-4 ${favorited ? "fill-white" : ""}`} />
-                </button>
-
                 <button
                   type="button"
                   onClick={closeProDetails}

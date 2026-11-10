@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import {
   Wrench,
   Calendar,
-  LogOut,
   Home,
   Search,
   Info,
@@ -11,32 +10,15 @@ import {
   Menu,
   X
 } from "lucide-react";
-import { useAuth } from "../context/useAuth";
 import { useBooking } from "../context/useBooking";
 import { useLanguage } from "../context/useLanguage";
 
 export const Navbar = () => {
-  const [userDropdownOpen, setUserDropdownOpen] = useState(false);
   const [tabletMenuOpen, setTabletMenuOpen] = useState(false);
 
   const location = useLocation();
-  const navigate = useNavigate();
-  const { currentUser, role, logout } = useAuth();
   const { activeBookingsCount, openBookingModalWithPro } = useBooking();
   const { t } = useLanguage();
-
-  const userDropdownRef = useRef(null);
-
-  // Close dropdown on outside click
-  useEffect(() => {
-    const handleOutsideClick = (e) => {
-      if (userDropdownRef.current && !userDropdownRef.current.contains(e.target)) {
-        setUserDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => document.removeEventListener("mousedown", handleOutsideClick);
-  }, []);
 
   // Close tablet menu on route change
   useEffect(() => {
@@ -72,7 +54,7 @@ export const Navbar = () => {
           STICKY TOP HEADER
           ======================================================== */}
       <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-colors">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="flex items-center justify-between h-[60px] md:h-[68px]">
             {/* Left: Brand Logo */}
             <Link
@@ -159,107 +141,6 @@ export const Navbar = () => {
               >
                 {t("getStarted")}
               </button>
-
-              {/* User Avatar & Dropdown */}
-              {currentUser ? (
-                <div className="relative" ref={userDropdownRef}>
-                  <button
-                    type="button"
-                    onClick={() => setUserDropdownOpen(!userDropdownOpen)}
-                    className="w-8 h-8 rounded-full ring-2 ring-indigo-200 overflow-hidden shrink-0 hover:ring-indigo-400 transition"
-                    title="Account Profile"
-                  >
-                    <img
-                      src={currentUser.avatar}
-                      alt={currentUser.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </button>
-
-                  {userDropdownOpen && (
-                    <div className="absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-slate-200/90 py-2 z-50 text-xs">
-                      <div className="px-3.5 py-2 border-b border-slate-100">
-                        <div className="font-bold text-slate-900 truncate">
-                          {currentUser.name}
-                        </div>
-                        <div className="text-[11px] text-slate-400 capitalize">
-                          {role} Account
-                        </div>
-                      </div>
-
-                      {role === "customer" && (
-                        <>
-                          <Link
-                            to="/dashboard/customer"
-                            onClick={() => setUserDropdownOpen(false)}
-                            className="block px-3.5 py-2 hover:bg-slate-50 text-slate-700 font-medium"
-                          >
-                            Customer Portal
-                          </Link>
-                          <Link
-                            to="/bookings"
-                            onClick={() => setUserDropdownOpen(false)}
-                            className="block px-3.5 py-2 hover:bg-slate-50 text-slate-700 font-medium"
-                          >
-                            My Appointments
-                          </Link>
-                        </>
-                      )}
-
-                      {role === "provider" && (
-                        <>
-                          <Link
-                            to="/dashboard/provider"
-                            onClick={() => setUserDropdownOpen(false)}
-                            className="block px-3.5 py-2 hover:bg-slate-50 text-slate-700 font-medium"
-                          >
-                            Provider Portal
-                          </Link>
-                          <Link
-                            to="/bookings"
-                            onClick={() => setUserDropdownOpen(false)}
-                            className="block px-3.5 py-2 hover:bg-slate-50 text-slate-700 font-medium"
-                          >
-                            Assigned Dispatches
-                          </Link>
-                        </>
-                      )}
-
-                      {role === "admin" && (
-                        <Link
-                          to="/dashboard/admin"
-                          onClick={() => setUserDropdownOpen(false)}
-                          className="block px-3.5 py-2 hover:bg-slate-50 text-slate-700 font-medium"
-                        >
-                          Admin Console
-                        </Link>
-                      )}
-
-                      <div className="pt-1 border-t border-slate-100 mt-1">
-                        <button
-                          type="button"
-                          onClick={() => {
-                            logout();
-                            setUserDropdownOpen(false);
-                            navigate("/");
-                          }}
-                          className="w-full text-left px-3.5 py-2 hover:bg-rose-50 text-rose-600 font-semibold flex items-center gap-1.5"
-                        >
-                          <LogOut className="w-3.5 h-3.5" />
-                          <span>{t("logout")}</span>
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  to="/login"
-                  className="px-3.5 py-1.5 rounded-lg border border-slate-300 text-slate-700 hover:text-indigo-600 hover:border-indigo-400 bg-white text-xs font-semibold transition"
-                >
-                  {t("signIn")}
-                </Link>
-              )}
 
               {/* Tablet Hamburger Toggle (Only visible on tablet: 768px <= width < 1024px) */}
               <button

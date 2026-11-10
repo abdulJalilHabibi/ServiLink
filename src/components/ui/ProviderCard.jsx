@@ -1,14 +1,13 @@
 import React from "react";
 import { motion } from "motion/react";
-import { Star, ShieldCheck, MapPin, Zap, Heart, Eye } from "lucide-react";
+import { Star, ShieldCheck, MapPin, Zap, Eye } from "lucide-react";
 import { useBooking } from "../../context/useBooking";
 
 export const ProviderCard = ({ provider }) => {
-  const { openBookingModalWithPro, openProDetails, isFavorite, toggleFavorite } = useBooking();
-  const favorited = isFavorite(provider.id);
+  const { openBookingModalWithPro, openProDetails } = useBooking();
 
   const handleCardClick = (e) => {
-    // Prevent opening modal if clicking favorite or book button directly
+    // Prevent opening modal if clicking book button directly
     if (e.target.closest("button") || e.target.closest("a")) return;
     openProDetails(provider);
   };
@@ -39,7 +38,7 @@ export const ProviderCard = ({ provider }) => {
             )}
           </div>
 
-          <div className="flex-1 min-w-0 pr-8">
+          <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1.5 flex-wrap">
               <h3 className="font-bold text-slate-900 text-sm sm:text-base leading-snug group-hover:text-indigo-600 transition-colors">
                 {provider.name}
@@ -65,23 +64,6 @@ export const ProviderCard = ({ provider }) => {
               <span className="text-slate-700 font-semibold text-[11px] shrink-0">{provider.jobsCompleted} jobs</span>
             </div>
           </div>
-
-          {/* Favorite button (cleanly positioned top-right) */}
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              toggleFavorite(provider.id);
-            }}
-            className={`absolute top-0 right-0 p-1.5 sm:p-2 rounded-xl border transition shrink-0 ${
-              favorited
-                ? "bg-rose-50 border-rose-200 text-rose-600 shadow-2xs"
-                : "bg-slate-50/80 border-slate-200 text-slate-400 hover:text-rose-500 hover:bg-white"
-            }`}
-            aria-label={favorited ? "Remove from saved favorites" : "Save pro to favorites"}
-          >
-            <Heart className={`w-4 h-4 ${favorited ? "fill-rose-500 text-rose-500" : ""}`} />
-          </button>
         </div>
 
         {/* Location & Response Time Meta */}

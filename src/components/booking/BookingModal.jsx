@@ -12,9 +12,7 @@ import {
   CheckCircle2,
   Sparkles,
   ShieldCheck,
-  Zap,
-  Clock,
-  ArrowRight
+  Clock
 } from "lucide-react";
 import { useBooking } from "../../context/useBooking";
 import { CATEGORIES } from "../../data/mockData";

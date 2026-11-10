@@ -11,18 +11,13 @@ import { ProviderDetailsModal } from "./components/ui/ProviderDetailsModal";
 import { Toast } from "./components/ui/Toast";
 
 // Lazy load pages for fast code-splitting and performance
-const HomePage = React.lazy(() => import("./pages/HomePage"));
-const ServicesPage = React.lazy(() => import("./pages/ServicesPage"));
-const CategoriesPage = React.lazy(() => import("./pages/CategoriesPage"));
-const MyBookingsPage = React.lazy(() => import("./pages/MyBookingsPage"));
-const AboutPage = React.lazy(() => import("./pages/AboutPage"));
-const ContactPage = React.lazy(() => import("./pages/ContactPage"));
-const LoginPage = React.lazy(() => import("./pages/auth/LoginPage"));
-const RegisterPage = React.lazy(() => import("./pages/auth/RegisterPage"));
-const ForgotPasswordPage = React.lazy(() => import("./pages/auth/ForgotPasswordPage"));
-const CustomerDashboard = React.lazy(() => import("./pages/dashboard/CustomerDashboard"));
+const HomePage = React.lazy(() => import("./pages/home/HomePage"));
+const ServicesPage = React.lazy(() => import("./pages/services/ServicesPage"));
+const CategoriesPage = React.lazy(() => import("./pages/categories/CategoriesPage"));
+const MyBookingsPage = React.lazy(() => import("./pages/bookings/MyBookingsPage"));
+const AboutPage = React.lazy(() => import("./pages/about/AboutPage"));
+const ContactPage = React.lazy(() => import("./pages/contact/ContactPage"));
 const ProviderDashboard = React.lazy(() => import("./pages/dashboard/ProviderDashboard"));
-const AdminDashboard = React.lazy(() => import("./pages/dashboard/AdminDashboard"));
 
 export default function App() {
   return (
@@ -51,15 +46,8 @@ export default function App() {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
 
-                  {/* Auth routes */}
-                  <Route path="/login" element={<LoginPage />} />
-                  <Route path="/register" element={<RegisterPage />} />
-                  <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-
-                  {/* Dashboards */}
-                  <Route path="/dashboard/customer" element={<CustomerDashboard />} />
+                  {/* Provider Dashboard */}
                   <Route path="/dashboard/provider" element={<ProviderDashboard />} />
-                  <Route path="/dashboard/admin" element={<AdminDashboard />} />
 
                   {/* Catch-all */}
                   <Route path="*" element={<HomePage />} />

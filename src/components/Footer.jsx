@@ -10,7 +10,7 @@ export const Footer = () => {
 
   return (
     <footer className="bg-white border-t border-slate-200/80 pt-12 pb-24 md:pb-12 transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pb-12 border-b border-slate-100">
           {/* Col 1: Brand & Emergency Hotline */}
@@ -107,11 +107,6 @@ export const Footer = () => {
                   $2,500 Trust Guarantee
                 </Link>
               </li>
-              <li>
-                <Link to="/dashboard/customer" className="hover:text-indigo-600 transition">
-                  Customer Dashboard
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -121,11 +116,6 @@ export const Footer = () => {
               {t("forProviders")}
             </h4>
             <ul className="space-y-1.5 text-xs text-slate-500">
-              <li>
-                <Link to="/register" className="hover:text-indigo-600 transition">
-                  {t("joinAsPro")}
-                </Link>
-              </li>
               <li>
                 <Link to="/dashboard/provider" className="hover:text-indigo-600 transition">
                   Technician Portal
@@ -161,13 +151,8 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/dashboard/admin" className="hover:text-indigo-600 transition">
-                  Admin Console
-                </Link>
-              </li>
-              <li>
-                <Link to="/login" className="hover:text-indigo-600 transition">
-                  Sign In
+                <Link to="/categories" className="hover:text-indigo-600 transition">
+                  All Categories
                 </Link>
               </li>
             </ul>
