@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9800 4800" width="9800" height="4800">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;display=swap');
+      text { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; }
+      .bold { font-weight: 700; }
+      .black { font-weight: 900; }
+      .semi { font-weight: 600; }
+      .regular { font-weight: 400; }
+    </style>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <filter id="modal-shadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="16" stdDeviation="28" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="primary-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="glow-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EEF2FF"/>
+      <stop offset="50%" stop-color="#E0E7FF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="9800" height="4800" fill="#E2E8F0"/>
+
+  <!-- ======================================================== -->
+  <!-- ARTBOARD 0: DESIGN SYSTEM & UI KIT (X: 100, Y: 100)       -->
+  <!-- ======================================================== -->
+  <g id="Frame_00_Design_System" transform="translate(100, 100)">
+    <!-- Artboard Background -->
+    <rect width="1300" height="4600" rx="24" fill="#FFFFFF" filter="url(#card-shadow)"/>
+    
+    <!-- Title -->
+    <text x="60" y="80" font-size="32" class="black" fill="#0F172A">ServiLink — Design System &amp; Tokens</text>
+    <text x="60" y="115" font-size="16" class="semi" fill="#64748B">Marketplace UI Style Guide • Tailwind CSS v4 &amp; Plus Jakarta Sans</text>
+    <line x1="60" y1="145" x2="1240" y2="145" stroke="#E2E8F0" stroke-width="2"/>
+
+    <!-- Section 1: Color Palette -->
+    <text x="60" y="195" font-size="22" class="black" fill="#0F172A">1. Brand &amp; Semantic Colors</text>
+    
+    <!-- Primary Indigo -->
+    <g transform="translate(60, 220)">
+      <rect width="180" height="90" rx="14" fill="#4F46E5"/>
+      <text x="16" y="40" font-size="14" class="black" fill="#FFFFFF">Primary 600</text>
+      <text x="16" y="65" font-size="12" class="semi" fill="#E0E7FF">#4F46E5 (Action)</text>
+    </g>
+    <g transform="translate(260, 220)">
+      <rect width="180" height="90" rx="14" fill="#4338CA"/>
+      <text x="16" y="40" font-size="14" class="black" fill="#FFFFFF">Primary 700</text>
+      <text x="16" y="65" font-size="12" class="semi" fill="#E0E7FF">#4338CA (Hover)</text>
+    </g>
+    <g transform="translate(460, 220)">
+      <rect width="180" height="90" rx="14" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+      <text x="16" y="40" font-size="14" class="black" fill="#4338CA">Primary 50</text>
+      <text x="16" y="65" font-size="12" class="semi" fill="#6366F1">#EEF2FF (Tints)</text>
+    </g>
+
+    <!-- Secondary Emerald -->
+    <g transform="translate(660, 220)">
+      <rect width="180" height="90" rx="14" fill="#10B981"/>
+      <text x="16" y="40" font-size="14" class="black" fill="#FFFFFF">Success / Verified</text>
+      <text x="16" y="65" font-size="12" class="semi" fill="#D1FAE5">#10B981</text>
+    </g>
+    <g transform="translate(860, 220)">
+      <rect width="180" height="90" rx="14" fill="#F59E0B"/>
+      <text x="16" y="40" font-size="14" class="black" fill="#FFFFFF">Rating / Amber</text>
+      <text x="16" y="65" font-size="12" class="semi" fill="#FEF3C7">#F59E0B</text>
+    </g>
+    <g transform="translate(1060, 220)">
+      <rect width="180" height="90" rx="14" fill="#EF4444"/>
+      <text x="16" y="40" font-size="14" class="black" fill="#FFFFFF">Danger / Cancel</text>
+      <text x="16" y="65" font-size="12" class="semi" fill="#FEE2E2">#EF4444</text>
+    </g>
+
+    <!-- Neutrals -->
+    <g transform="translate(60, 330)">
+      <rect width="180" height="70" rx="12" fill="#0F172A"/>
+      <text x="14" y="32" font-size="13" class="bold" fill="#FFFFFF">Slate 900 #0F172A</text>
+      <text x="14" y="52" font-size="11" class="regular" fill="#94A3B8">Headlines &amp; Titles</text>
+    </g>
+    <g transform="translate(260, 330)">
+      <rect width="180" height="70" rx="12" fill="#334155"/>
+      <text x="14" y="32" font-size="13" class="bold" fill="#FFFFFF">Slate 700 #334155</text>
+      <text x="14" y="52" font-size="11" class="regular" fill="#94A3B8">Body text</text>
+    </g>
+    <g transform="translate(460, 330)">
+      <rect width="180" height="70" rx="12" fill="#64748B"/>
+      <text x="14" y="32" font-size="13" class="bold" fill="#FFFFFF">Slate 500 #64748B</text>
+      <text x="14" y="52" font-size="11" class="regular" fill="#E2E8F0">Captions &amp; Subtitles</text>
+    </g>
+    <g transform="translate(660, 330)">
+      <rect width="180" height="70" rx="12" fill="#E2E8F0"/>
+      <text x="14" y="32" font-size="13" class="bold" fill="#334155">Slate 200 #E2E8F0</text>
+      <text x="14" y="52" font-size="11" class="regular" fill="#64748B">Borders &amp; Dividers</text>
+    </g>
+    <g transform="translate(860, 330)">
+      <rect width="180" height="70" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="14" y="32" font-size="13" class="bold" fill="#334155">Slate 50 #F8FAFC</text>
+      <text x="14" y="52" font-size="11" class="regular" fill="#64748B">Surface / Cards</text>
+    </g>
+    <g transform="translate(1060, 330)">
+      <rect width="180" height="70" rx="12" fill="#FAFAFC" stroke="#E2E8F0"/>
+      <text x="14" y="32" font-size="13" class="bold" fill="#334155">BG #FAFAFC</text>
+      <text x="14" y="52" font-size="11" class="regular" fill="#64748B">Canvas Background</text>
+    </g>
+
+    <!-- Section 2: Typography Scale -->
+    <text x="60" y="460" font-size="22" class="black" fill="#0F172A">2. Typography Scale (Plus Jakarta Sans)</text>
+    <g transform="translate(60, 490)">
+      <text x="0" y="40" font-size="44" class="black" fill="#0F172A">Display 44px — Master Marketplace Headline</text>
+      <text x="0" y="90" font-size="32" class="black" fill="#0F172A">H1 32px — Find Trusted Local Service Pros</text>
+      <text x="0" y="135" font-size="24" class="bold" fill="#0F172A">H2 24px — Explore All Service Categories</text>
+      <text x="0" y="175" font-size="18" class="bold" fill="#0F172A">H3 18px — 4-Stage Specialist Verification Process</text>
+      <text x="0" y="210" font-size="15" class="regular" fill="#334155">Body 15px — Connect with honest, background-checked technicians for electrical, plumbing and HVAC.</text>
+      <text x="0" y="240" font-size="12" class="semi" fill="#64748B">Caption 12px — Average Arrival: 18 Mins • Zero Late-Night Surcharges • Wazir Akbar Khan</text>
+    </g>
+
+    <!-- Section 3: UI Components Library -->
+    <text x="60" y="800" font-size="22" class="black" fill="#0F172A">3. UI Component Primitives</text>
+    
+    <!-- Buttons -->
+    <g transform="translate(60, 830)">
+      <rect width="190" height="48" rx="14" fill="#4F46E5"/>
+      <text x="35" y="30" font-size="14" class="bold" fill="#FFFFFF">Primary Action</text>
+    </g>
+    <g transform="translate(270, 830)">
+      <rect width="190" height="48" rx="14" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5"/>
+      <text x="45" y="30" font-size="14" class="bold" fill="#4338CA">Secondary</text>
+    </g>
+    <g transform="translate(480, 830)">
+      <rect width="190" height="48" rx="14" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5"/>
+      <text x="40" y="30" font-size="14" class="bold" fill="#065F46">Success Pill</text>
+    </g>
+    <g transform="translate(690, 830)">
+      <rect width="190" height="48" rx="14" fill="#FEF2F2" stroke="#FECACA" stroke-width="1.5"/>
+      <text x="45" y="30" font-size="14" class="bold" fill="#991B1B">Danger / Cancel</text>
+    </g>
+
+    <!-- Status Badges -->
+    <g transform="translate(60, 910)">
+      <rect width="120" height="32" rx="16" fill="#ECFDF5" stroke="#10B981" stroke-width="1"/>
+      <circle cx="20" cy="16" r="4" fill="#10B981"/>
+      <text x="34" y="21" font-size="12" class="bold" fill="#065F46">Confirmed</text>
+    </g>
+    <g transform="translate(200, 910)">
+      <rect width="110" height="32" rx="16" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1"/>
+      <circle cx="20" cy="16" r="4" fill="#F59E0B"/>
+      <text x="34" y="21" font-size="12" class="bold" fill="#92400E">Pending</text>
+    </g>
+    <g transform="translate(330, 910)">
+      <rect width="120" height="32" rx="16" fill="#EEF2FF" stroke="#6366F1" stroke-width="1"/>
+      <circle cx="20" cy="16" r="4" fill="#4F46E5"/>
+      <text x="34" y="21" font-size="12" class="bold" fill="#3730A3">Completed</text>
+    </g>
+    <g transform="translate(470, 910)">
+      <rect width="115" height="32" rx="16" fill="#FEF2F2" stroke="#EF4444" stroke-width="1"/>
+      <circle cx="20" cy="16" r="4" fill="#EF4444"/>
+      <text x="34" y="21" font-size="12" class="bold" fill="#991B1B">Cancelled</text>
+    </g>
+
+    <!-- Component: Sample Provider Card -->
+    <text x="60" y="990" font-size="18" class="bold" fill="#0F172A">Sample Provider Card Component</text>
+    <g transform="translate(60, 1010)" filter="url(#card-shadow)">
+      <rect width="450" height="320" rx="24" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="24" y="24" width="60" height="60" rx="16" fill="#C7D2FE"/>
+      <circle cx="54" cy="54" r="20" fill="#4F46E5"/>
+      <text x="47" y="60" font-size="18" class="black" fill="#FFFFFF">AR</text>
+      
+      <text x="100" y="45" font-size="18" class="bold" fill="#0F172A">Ahmad Tariq Rahimi</text>
+      <text x="100" y="68" font-size="13" class="semi" fill="#4F46E5">Master Electrician &amp; Solar Tech</text>
+      
+      <rect x="24" y="100" width="85" height="26" rx="8" fill="#FEF3C7"/>
+      <text x="34" y="118" font-size="12" class="bold" fill="#B45309">★ 4.98 (284)</text>
+
+      <rect x="120" y="100" width="115" height="26" rx="8" fill="#ECFDF5"/>
+      <text x="130" y="118" font-size="12" class="bold" fill="#065F46">✓ Verified Pro</text>
+
+      <text x="24" y="160" font-size="13" class="regular" fill="#475569">Certified for domestic solar arrays, generator switchers, and central wiring.</text>
+      
+      <text x="24" y="200" font-size="12" class="semi" fill="#64748B">📍 Shahr-e Naw, Kabul Metro</text>
+      
+      <line x1="24" y1="230" x2="426" y2="230" stroke="#F1F5F9" stroke-width="1.5"/>
+      
+      <text x="24" y="275" font-size="22" class="black" fill="#0F172A">$40<tspan font-size="13" class="semi" fill="#64748B">/hr</tspan></text>
+      
+      <rect x="270" y="248" width="156" height="44" rx="14" fill="#4F46E5"/>
+      <text x="305" y="275" font-size="14" class="bold" fill="#FFFFFF">Book Now →</text>
+    </g>
+
+    <!-- Component: Category Card -->
+    <text x="560" y="990" font-size="18" class="bold" fill="#0F172A">Sample Category Card Component</text>
+    <g transform="translate(560, 1010)" filter="url(#card-shadow)">
+      <rect width="450" height="220" rx="24" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="24" y="24" width="56" height="56" rx="18" fill="#EEF2FF"/>
+      <text x="43" y="60" font-size="24">⚡</text>
+      
+      <rect x="300" y="24" width="126" height="28" rx="14" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="315" y="43" font-size="12" class="semi" fill="#475569">28 Verified Pros</text>
+      
+      <text x="24" y="115" font-size="20" class="bold" fill="#0F172A">Electrical &amp; Solar</text>
+      <text x="24" y="140" font-size="13" class="regular" fill="#64748B">Blackout repairs, breaker upgrades, and inverter setups.</text>
+      
+      <line x1="24" y1="165" x2="426" y2="165" stroke="#F1F5F9" stroke-width="1.5"/>
+      <text x="24" y="195" font-size="14" class="bold" fill="#10B981">From $35/hr</text>
+      <text x="340" y="195" font-size="13" class="bold" fill="#4F46E5">Browse Pros →</text>
+    </g>
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- ARTBOARD 1: HOME PAGE (X: 1500, Y: 100)                  -->
+  <!-- ======================================================== -->
+  <g id="Frame_01_Home_Page" transform="translate(1500, 100)">
+    <!-- Browser/Screen Frame -->
+    <rect width="1440" height="4600" rx="24" fill="#FAFAFC" filter="url(#card-shadow)"/>
+    
+    <!-- Header / Navbar -->
+    <g id="Navbar" transform="translate(0, 0)">
+      <rect width="1440" height="80" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <!-- Logo -->
+      <g transform="translate(60, 20)">
+        <rect width="40" height="40" rx="10" fill="#4F46E5"/>
+        <text x="13" y="27" font-size="20" class="black" fill="#FFFFFF">S</text>
+        <text x="50" y="28" font-size="22" class="black" fill="#0F172A">Servi<tspan fill="#4F46E5">Link</tspan></text>
+      </g>
+      <!-- Nav Links -->
+      <text x="360" y="46" font-size="14" class="bold" fill="#4F46E5">Home</text>
+      <text x="440" y="46" font-size="14" class="semi" fill="#475569">Services</text>
+      <text x="535" y="46" font-size="14" class="semi" fill="#475569">Categories</text>
+      <text x="645" y="46" font-size="14" class="semi" fill="#475569">My Bookings</text>
+      <text x="770" y="46" font-size="14" class="semi" fill="#475569">About Us</text>
+      <text x="865" y="46" font-size="14" class="semi" fill="#475569">Contact</text>
+      
+      <!-- Right Controls -->
+      <g transform="translate(1080, 20)">
+        <rect width="100" height="40" rx="10" fill="#F1F5F9"/>
+        <text x="24" y="25" font-size="13" class="bold" fill="#334155">🌐 EN / دری</text>
+      </g>
+      <g transform="translate(1200, 20)">
+        <rect width="180" height="40" rx="12" fill="#4F46E5"/>
+        <text x="38" y="25" font-size="13" class="bold" fill="#FFFFFF">⚡ Book a Pro</text>
+      </g>
+    </g>
+
+    <!-- Hero Section -->
+    <g id="Hero_Section" transform="translate(120, 130)">
+      <rect width="1200" height="480" rx="32" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#card-shadow)"/>
+      
+      <!-- Top Pill -->
+      <g transform="translate(450, 45)">
+        <rect width="300" height="34" rx="17" fill="#ECFDF5" stroke="#A7F3D0"/>
+        <circle cx="20" cy="17" r="5" fill="#10B981"/>
+        <text x="35" y="22" font-size="12" class="black" fill="#047857">142 VETTED PROS ACTIVE NEARBY</text>
+      </g>
+      
+      <!-- Headline -->
+      <text x="600" y="145" text-anchor="middle" font-size="46" class="black" fill="#0F172A">Connect with <tspan fill="#4F46E5">Verified Local Pros</tspan></text>
+      <text x="600" y="200" text-anchor="middle" font-size="46" class="black" fill="#0F172A">in Under 5 Minutes</text>
+      <text x="600" y="245" text-anchor="middle" font-size="16" class="regular" fill="#64748B">Transparent hourly rates, background-checked master tradesmen, and rapid emergency arrival across Kabul metro.</text>
+      
+      <!-- Search Input Container -->
+      <g transform="translate(150, 290)">
+        <rect width="900" height="72" rx="20" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+        <!-- Search field -->
+        <text x="50" y="42" font-size="15" class="semi" fill="#94A3B8">🔍 What service do you need? (e.g. Electrician, Pipe leak...)</text>
+        <!-- District dropdown -->
+        <rect x="530" y="12" width="200" height="48" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+        <text x="550" y="41" font-size="13" class="bold" fill="#334155">📍 Kabul (All Districts)</text>
+        <!-- Button -->
+        <rect x="745" y="12" width="140" height="48" rx="14" fill="#4F46E5"/>
+        <text x="775" y="41" font-size="14" class="bold" fill="#FFFFFF">Find Pros →</text>
+      </g>
+
+      <!-- Trust Badges Under Search -->
+      <g transform="translate(250, 400)">
+        <text x="0" y="25" font-size="13" class="bold" fill="#334155">✓ 100% Background Checked</text>
+        <text x="260" y="25" font-size="13" class="bold" fill="#334155">✓ Fixed Hourly Pricing</text>
+        <text x="480" y="25" font-size="13" class="bold" fill="#334155">✓ $2,500 Damage Protection</text>
+      </g>
+    </g>
+
+    <!-- Stats Row -->
+    <g id="Stats_Row" transform="translate(120, 650)">
+      <g transform="translate(0, 0)">
+        <rect width="370" height="110" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+        <text x="30" y="55" font-size="34" class="black" fill="#4F46E5">4,850+</text>
+        <text x="30" y="85" font-size="12" class="black" fill="#64748B">COMPLETED BOOKINGS</text>
+      </g>
+      <g transform="translate(415, 0)">
+        <rect width="370" height="110" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+        <text x="30" y="55" font-size="34" class="black" fill="#10B981">4.95 / 5</text>
+        <text x="30" y="85" font-size="12" class="black" fill="#64748B">AVERAGE CUSTOMER RATING</text>
+      </g>
+      <g transform="translate(830, 0)">
+        <rect width="370" height="110" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+        <text x="30" y="55" font-size="34" class="black" fill="#4F46E5">140+</text>
+        <text x="30" y="85" font-size="12" class="black" fill="#64748B">ACTIVE SPECIALISTS IN KABUL</text>
+      </g>
+    </g>
+
+    <!-- Browse Categories Grid -->
+    <g id="Home_Categories" transform="translate(120, 810)">
+      <text x="0" y="40" font-size="28" class="black" fill="#0F172A">Popular Service Categories</text>
+      <text x="0" y="68" font-size="14" class="regular" fill="#64748B">Verified local specialists equipped for residential and commercial repairs.</text>
+      
+      <!-- 6 Categories Grid -->
+      <g transform="translate(0, 100)">
+        <g transform="translate(0, 0)">
+          <rect width="370" height="160" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+          <text x="24" y="50" font-size="28">⚡</text>
+          <text x="24" y="90" font-size="18" class="bold" fill="#0F172A">Electrical &amp; Solar</text>
+          <text x="24" y="115" font-size="12" class="regular" fill="#64748B">Short circuits, generator switchers, solar.</text>
+          <text x="24" y="142" font-size="13" class="bold" fill="#10B981">$35/hr • 28 Pros</text>
+        </g>
+        <g transform="translate(415, 0)">
+          <rect width="370" height="160" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+          <text x="24" y="50" font-size="28">💧</text>
+          <text x="24" y="90" font-size="18" class="bold" fill="#0F172A">Plumbing &amp; Sanitary</text>
+          <text x="24" y="115" font-size="12" class="regular" fill="#64748B">Pipe burst, drain unblocking, water pump.</text>
+          <text x="24" y="142" font-size="13" class="bold" fill="#10B981">$30/hr • 34 Pros</text>
+        </g>
+        <g transform="translate(830, 0)">
+          <rect width="370" height="160" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+          <text x="24" y="50" font-size="28">❄️</text>
+          <text x="24" y="90" font-size="18" class="bold" fill="#0F172A">HVAC &amp; AC Service</text>
+          <text x="24" y="115" font-size="12" class="regular" fill="#64748B">Split AC recharge, boiler heating repairs.</text>
+          <text x="24" y="142" font-size="13" class="bold" fill="#10B981">$40/hr • 18 Pros</text>
+        </g>
+
+        <g transform="translate(0, 190)">
+          <rect width="370" height="160" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+          <text x="24" y="50" font-size="28">🔨</text>
+          <text x="24" y="90" font-size="18" class="bold" fill="#0F172A">Carpentry &amp; Woodwork</text>
+          <text x="24" y="115" font-size="12" class="regular" fill="#64748B">Door lock fixing, furniture repair, custom fit.</text>
+          <text x="24" y="142" font-size="13" class="bold" fill="#10B981">$28/hr • 22 Pros</text>
+        </g>
+        <g transform="translate(415, 190)">
+          <rect width="370" height="160" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+          <text x="24" y="50" font-size="28">🎨</text>
+          <text x="24" y="90" font-size="18" class="bold" fill="#0F172A">Painting &amp; Drywall</text>
+          <text x="24" y="115" font-size="12" class="regular" fill="#64748B">Interior touch-up, anti-mold sealing.</text>
+          <text x="24" y="142" font-size="13" class="bold" fill="#10B981">$25/hr • 16 Pros</text>
+        </g>
+        <g transform="translate(830, 190)">
+          <rect width="370" height="160" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+          <text x="24" y="50" font-size="28">✨</text>
+          <text x="24" y="90" font-size="18" class="bold" fill="#0F172A">Home Deep Cleaning</text>
+          <text x="24" y="115" font-size="12" class="regular" fill="#64748B">Full villa sanitation, carpet cleaning.</text>
+          <text x="24" y="142" font-size="13" class="bold" fill="#10B981">$22/hr • 25 Pros</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Top Verified Specialists Section -->
+    <g id="Home_Top_Pros" transform="translate(120, 1310)">
+      <text x="0" y="40" font-size="28" class="black" fill="#0F172A">Top Rated Service Specialists</text>
+      <text x="0" y="68" font-size="14" class="regular" fill="#64748B">Selected technicians with over 98% positive verification scores.</text>
+      
+      <!-- 2 Columns of Provider Cards -->
+      <g transform="translate(0, 100)">
+        <!-- Pro 1 -->
+        <g transform="translate(0, 0)">
+          <rect width="580" height="230" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+          <rect x="24" y="24" width="56" height="56" rx="16" fill="#C7D2FE"/>
+          <text x="44" y="58" font-size="18" class="black" fill="#4338CA">AR</text>
+          <text x="96" y="45" font-size="18" class="bold" fill="#0F172A">Ahmad Tariq Rahimi</text>
+          <text x="96" y="68" font-size="13" class="semi" fill="#4F46E5">Master Electrician • Solar &amp; Inverter</text>
+          <text x="24" y="115" font-size="12" class="bold" fill="#D97706">★ 4.98 (284 reviews) • 430 jobs done</text>
+          <text x="24" y="145" font-size="12" class="regular" fill="#64748B">📍 Shahr-e Naw, Kabul • Arrives in 15-25 min</text>
+          <line x1="24" y1="165" x2="556" y2="165" stroke="#F1F5F9"/>
+          <text x="24" y="200" font-size="20" class="black" fill="#0F172A">$40<tspan font-size="12" class="semi" fill="#64748B">/hr</tspan></text>
+          <rect x="420" y="176" width="136" height="38" rx="12" fill="#4F46E5"/>
+          <text x="450" y="200" font-size="13" class="bold" fill="#FFFFFF">Book Now →</text>
+        </g>
+        <!-- Pro 2 -->
+        <g transform="translate(620, 0)">
+          <rect width="580" height="230" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+          <rect x="24" y="24" width="56" height="56" rx="16" fill="#A7F3D0"/>
+          <text x="44" y="58" font-size="18" class="black" fill="#065F46">FM</text>
+          <text x="96" y="45" font-size="18" class="bold" fill="#0F172A">Farhad Mohammad</text>
+          <text x="96" y="68" font-size="13" class="semi" fill="#10B981">Senior Master Plumber • Pipe Specialist</text>
+          <text x="24" y="115" font-size="12" class="bold" fill="#D97706">★ 4.95 (310 reviews) • 520 jobs done</text>
+          <text x="24" y="145" font-size="12" class="regular" fill="#64748B">📍 Wazir Akbar Khan, Kabul • Arrives in 15 min</text>
+          <line x1="24" y1="165" x2="556" y2="165" stroke="#F1F5F9"/>
+          <text x="24" y="200" font-size="20" class="black" fill="#0F172A">$35<tspan font-size="12" class="semi" fill="#64748B">/hr</tspan></text>
+          <rect x="420" y="176" width="136" height="38" rx="12" fill="#4F46E5"/>
+          <text x="450" y="200" font-size="13" class="bold" fill="#FFFFFF">Book Now →</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Emergency Banner Section -->
+    <g id="Home_Emergency_Banner" transform="translate(120, 1720)">
+      <rect width="1200" height="200" rx="28" fill="#4F46E5"/>
+      <g transform="translate(60, 40)">
+        <rect width="240" height="30" rx="15" fill="#FFFFFF" opacity="0.2"/>
+        <circle cx="16" cy="15" r="4" fill="#34D399"/>
+        <text x="28" y="20" font-size="11" class="black" fill="#FFFFFF">24/7 RAPID DISPATCH ACTIVE</text>
+        
+        <text x="0" y="70" font-size="26" class="black" fill="#FFFFFF">Facing an Urgent Power, Water, or AC Emergency?</text>
+        <text x="0" y="98" font-size="14" class="semi" fill="#C7D2FE">Our on-call specialists arrive within 15–30 minutes across all 22 Kabul districts with zero late-night surcharges.</text>
+      </g>
+      <g transform="translate(900, 75)">
+        <rect width="240" height="56" rx="16" fill="#FFFFFF"/>
+        <text x="42" y="35" font-size="16" class="black" fill="#4338CA">📞 079 123 4567</text>
+      </g>
+    </g>
+
+    <!-- How It Works Section -->
+    <g id="Home_HowItWorks" transform="translate(120, 1980)">
+      <text x="600" y="40" text-anchor="middle" font-size="28" class="black" fill="#0F172A">How ServiLink Works</text>
+      <text x="600" y="68" text-anchor="middle" font-size="14" class="regular" fill="#64748B">Three simple steps to certified trade service.</text>
+
+      <g transform="translate(0, 100)">
+        <g transform="translate(0, 0)">
+          <rect width="370" height="180" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+          <circle cx="44" cy="44" r="20" fill="#EEF2FF"/>
+          <text x="38" y="51" font-size="16" class="black" fill="#4F46E5">1</text>
+          <text x="24" y="95" font-size="18" class="bold" fill="#0F172A">Choose Service &amp; Time</text>
+          <text x="24" y="125" font-size="13" class="regular" fill="#64748B">Select your needed trade, describe the issue, and pick your preferred arrival slot.</text>
+        </g>
+        <g transform="translate(415, 0)">
+          <rect width="370" height="180" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+          <circle cx="44" cy="44" r="20" fill="#EEF2FF"/>
+          <text x="38" y="51" font-size="16" class="black" fill="#4F46E5">2</text>
+          <text x="24" y="95" font-size="18" class="bold" fill="#0F172A">Pro Dispatched Instantly</text>
+          <text x="24" y="125" font-size="13" class="regular" fill="#64748B">A background-checked master technician confirms arrival with upfront hourly rate.</text>
+        </g>
+        <g transform="translate(830, 0)">
+          <rect width="370" height="180" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+          <circle cx="44" cy="44" r="20" fill="#EEF2FF"/>
+          <text x="38" y="51" font-size="16" class="black" fill="#4F46E5">3</text>
+          <text x="24" y="95" font-size="18" class="bold" fill="#0F172A">Pay After Inspection</text>
+          <text x="24" y="125" font-size="13" class="regular" fill="#64748B">Inspect the completed repairs, sign off, and pay cash or digital escrow with guarantee.</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Global Footer -->
+    <g id="Footer" transform="translate(0, 4260)">
+      <rect width="1440" height="340" fill="#0F172A"/>
+      <g transform="translate(120, 60)">
+        <text x="0" y="30" font-size="24" class="black" fill="#FFFFFF">Servi<tspan fill="#818CF8">Link</tspan></text>
+        <text x="0" y="65" font-size="13" class="regular" fill="#94A3B8">Building Kabul's most trusted local on-demand technician network with background check guarantee.</text>
+        <text x="0" y="140" font-size="12" class="regular" fill="#64748B">© 2026 ServiLink AF. All rights reserved.</text>
+      </g>
+      <!-- Footer Nav columns -->
+      <g transform="translate(680, 60)">
+        <text x="0" y="25" font-size="13" class="black" fill="#FFFFFF">SERVICES</text>
+        <text x="0" y="55" font-size="12" class="semi" fill="#94A3B8">Electrical &amp; Solar</text>
+        <text x="0" y="80" font-size="12" class="semi" fill="#94A3B8">Plumbing &amp; Sanitary</text>
+        <text x="0" y="105" font-size="12" class="semi" fill="#94A3B8">HVAC Maintenance</text>
+      </g>
+      <g transform="translate(900, 60)">
+        <text x="0" y="25" font-size="13" class="black" fill="#FFFFFF">COMPANY</text>
+        <text x="0" y="55" font-size="12" class="semi" fill="#94A3B8">About ServiLink</text>
+        <text x="0" y="80" font-size="12" class="semi" fill="#94A3B8">Vetting Standards</text>
+        <text x="0" y="105" font-size="12" class="semi" fill="#94A3B8">Contact Dispatch</text>
+      </g>
+      <g transform="translate(1120, 60)">
+        <text x="0" y="25" font-size="13" class="black" fill="#FFFFFF">DISPATCH</text>
+        <text x="0" y="55" font-size="13" class="bold" fill="#34D399">📞 079 123 4567</text>
+        <text x="0" y="80" font-size="12" class="semi" fill="#94A3B8">support@servilink.af</text>
+        <text x="0" y="105" font-size="12" class="semi" fill="#94A3B8">Charahi Ansari, Kabul</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- ARTBOARD 2: SERVICES DIRECTORY (X: 3050, Y: 100)        -->
+  <!-- ======================================================== -->
+  <g id="Frame_02_Services_Page" transform="translate(3050, 100)">
+    <rect width="1440" height="3600" rx="24" fill="#FAFAFC" filter="url(#card-shadow)"/>
+    
+    <!-- Navbar Header -->
+    <use href="#Navbar" x="0" y="0"/>
+    
+    <!-- Services Header -->
+    <g transform="translate(120, 120)">
+      <rect width="160" height="28" rx="14" fill="#EEF2FF"/>
+      <text x="14" y="19" font-size="11" class="bold" fill="#4F46E5">✨ TECHNICIAN DIRECTORY</text>
+      
+      <text x="0" y="65" font-size="34" class="black" fill="#0F172A">Find Trusted Local Service Pros</text>
+      <text x="0" y="95" font-size="14" class="regular" fill="#64748B">Browse verified specialists with upfront hourly rates, real reviews, and 100% background checks across Kabul.</text>
+    </g>
+
+    <!-- Filter Bar Container -->
+    <g transform="translate(120, 250)">
+      <rect width="1200" height="170" rx="24" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#card-shadow)"/>
+      
+      <!-- Search input -->
+      <g transform="translate(24, 24)">
+        <rect width="480" height="46" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+        <text x="18" y="29" font-size="13" class="semi" fill="#94A3B8">🔍 Search by name, skill (e.g. Solar, Wiring, PVC)...</text>
+      </g>
+      <!-- District Select -->
+      <g transform="translate(520, 24)">
+        <rect width="320" height="46" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+        <text x="18" y="29" font-size="13" class="bold" fill="#334155">📍 District 10 (Wazir Akbar Khan)</text>
+      </g>
+      <!-- Sort Select -->
+      <g transform="translate(860, 24)">
+        <rect width="316" height="46" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+        <text x="18" y="29" font-size="13" class="bold" fill="#334155">↕ Sort: Highest Rated</text>
+      </g>
+
+      <!-- Category Filter Pills -->
+      <g transform="translate(24, 88)">
+        <rect width="70" height="32" rx="10" fill="#4F46E5"/>
+        <text x="14" y="21" font-size="12" class="bold" fill="#FFFFFF">All (12)</text>
+        
+        <rect x="80" y="0" width="105" height="32" rx="10" fill="#F1F5F9"/>
+        <text x="96" y="21" font-size="12" class="semi" fill="#475569">Electrical</text>
+        
+        <rect x="195" y="0" width="105" height="32" rx="10" fill="#F1F5F9"/>
+        <text x="215" y="21" font-size="12" class="semi" fill="#475569">Plumbing</text>
+
+        <rect x="310" y="0" width="85" height="32" rx="10" fill="#F1F5F9"/>
+        <text x="330" y="21" font-size="12" class="semi" fill="#475569">HVAC</text>
+
+        <rect x="405" y="0" width="105" height="32" rx="10" fill="#F1F5F9"/>
+        <text x="425" y="21" font-size="12" class="semi" fill="#475569">Carpentry</text>
+      </g>
+
+      <!-- Price & Rating Subfilter -->
+      <g transform="translate(24, 132)">
+        <text x="0" y="16" font-size="12" class="semi" fill="#64748B">Max Rate: <tspan class="bold" fill="#0F172A">$60/hr</tspan></text>
+        <text x="220" y="16" font-size="12" class="semi" fill="#64748B">Min Rating: <tspan class="bold" fill="#D97706">4.8+ ★</tspan></text>
+        <text x="1060" y="16" font-size="12" class="bold" fill="#4F46E5">↺ Reset Filters</text>
+      </g>
+    </g>
+
+    <!-- Services Results Grid -->
+    <g transform="translate(120, 460)">
+      <text x="0" y="0" font-size="14" class="semi" fill="#475569">Showing <tspan class="bold" fill="#0F172A">8 verified specialists</tspan> in Kabul Metro</text>
+      
+      <!-- Cards Column 1 -->
+      <g transform="translate(0, 30)">
+        <!-- Card 1 -->
+        <g transform="translate(0, 0)">
+          <rect width="580" height="240" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+          <rect x="24" y="24" width="56" height="56" rx="16" fill="#C7D2FE"/>
+          <text x="44" y="58" font-size="18" class="black" fill="#4338CA">AR</text>
+          <text x="96" y="45" font-size="18" class="bold" fill="#0F172A">Ahmad Tariq Rahimi</text>
+          <text x="96" y="68" font-size="13" class="semi" fill="#4F46E5">Master Electrician &amp; Solar Tech</text>
+          <text x="24" y="115" font-size="12" class="bold" fill="#D97706">★ 4.98 (284 reviews) • 430 jobs done</text>
+          <text x="24" y="145" font-size="12" class="regular" fill="#64748B">Skills: Panel Upgrades, Solar Inverters, Generator ATS</text>
+          <line x1="24" y1="170" x2="556" y2="170" stroke="#F1F5F9"/>
+          <text x="24" y="208" font-size="20" class="black" fill="#0F172A">$40<tspan font-size="12" class="semi" fill="#64748B">/hr</tspan></text>
+          <rect x="420" y="184" width="136" height="38" rx="12" fill="#4F46E5"/>
+          <text x="450" y="208" font-size="13" class="bold" fill="#FFFFFF">Book Now →</text>
+        </g>
+        <!-- Card 2 -->
+        <g transform="translate(0, 260)">
+          <rect width="580" height="240" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+          <rect x="24" y="24" width="56" height="56" rx="16" fill="#FED7AA"/>
+          <text x="44" y="58" font-size="18" class="black" fill="#9A3412">ZA</text>
+          <text x="96" y="45" font-size="18" class="bold" fill="#0F172A">Zuhra Alimi</text>
+          <text x="96" y="68" font-size="13" class="semi" fill="#EA580C">HVAC &amp; Clean Air Specialist</text>
+          <text x="24" y="115" font-size="12" class="bold" fill="#D97706">★ 4.92 (198 reviews) • 260 jobs done</text>
+          <text x="24" y="145" font-size="12" class="regular" fill="#64748B">Skills: Split AC Recharge, Gas Leaks, Duct Diagnostics</text>
+          <line x1="24" y1="170" x2="556" y2="170" stroke="#F1F5F9"/>
+          <text x="24" y="208" font-size="20" class="black" fill="#0F172A">$45<tspan font-size="12" class="semi" fill="#64748B">/hr</tspan></text>
+          <rect x="420" y="184" width="136" height="38" rx="12" fill="#4F46E5"/>
+          <text x="450" y="208" font-size="13" class="bold" fill="#FFFFFF">Book Now →</text>
+        </g>
+      </g>
+
+      <!-- Cards Column 2 -->
+      <g transform="translate(620, 30)">
+        <!-- Card 3 -->
+        <g transform="translate(0, 0)">
+          <rect width="580" height="240" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+          <rect x="24" y="24" width="56" height="56" rx="16" fill="#A7F3D0"/>
+          <text x="44" y="58" font-size="18" class="black" fill="#065F46">FM</text>
+          <text x="96" y="45" font-size="18" class="bold" fill="#0F172A">Farhad Mohammad</text>
+          <text x="96" y="68" font-size="13" class="semi" fill="#10B981">Senior Master Plumber</text>
+          <text x="24" y="115" font-size="12" class="bold" fill="#D97706">★ 4.95 (310 reviews) • 520 jobs done</text>
+          <text x="24" y="145" font-size="12" class="regular" fill="#64748B">Skills: High Pressure PPR, Drain Cleaning, Water Heaters</text>
+          <line x1="24" y1="170" x2="556" y2="170" stroke="#F1F5F9"/>
+          <text x="24" y="208" font-size="20" class="black" fill="#0F172A">$35<tspan font-size="12" class="semi" fill="#64748B">/hr</tspan></text>
+          <rect x="420" y="184" width="136" height="38" rx="12" fill="#4F46E5"/>
+          <text x="450" y="208" font-size="13" class="bold" fill="#FFFFFF">Book Now →</text>
+        </g>
+        <!-- Card 4 -->
+        <g transform="translate(0, 260)">
+          <rect width="580" height="240" rx="20" fill="#FFFFFF" stroke="#E2E8F0"/>
+          <rect x="24" y="24" width="56" height="56" rx="16" fill="#FBCFE8"/>
+          <text x="44" y="58" font-size="18" class="black" fill="#9D174D">MK</text>
+          <text x="96" y="45" font-size="18" class="bold" fill="#0F172A">Mustafa Kohistani</text>
+          <text x="96" y="68" font-size="13" class="semi" fill="#BE185D">Master Joiner &amp; Locksmith</text>
+          <text x="24" y="115" font-size="12" class="bold" fill="#D97706">★ 4.88 (142 reviews) • 190 jobs done</text>
+          <text x="24" y="145" font-size="12" class="regular" fill="#64748B">Skills: Security Lock Rekey, Door Alignment, Wood Repair</text>
+          <line x1="24" y1="170" x2="556" y2="170" stroke="#F1F5F9"/>
+          <text x="24" y="208" font-size="20" class="black" fill="#0F172A">$28<tspan font-size="12" class="semi" fill="#64748B">/hr</tspan></text>
+          <rect x="420" y="184" width="136" height="38" rx="12" fill="#4F46E5"/>
+          <text x="450" y="208" font-size="13" class="bold" fill="#FFFFFF">Book Now →</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- ARTBOARD 3: MY BOOKINGS (X: 4600, Y: 100)               -->
+  <!-- ======================================================== -->
+  <g id="Frame_03_MyBookings_Page" transform="translate(4600, 100)">
+    <rect width="1440" height="3000" rx="24" fill="#FAFAFC" filter="url(#card-shadow)"/>
+    <use href="#Navbar" x="0" y="0"/>
+    
+    <!-- Header -->
+    <g transform="translate(120, 120)">
+      <rect width="180" height="28" rx="14" fill="#EEF2FF"/>
+      <text x="14" y="19" font-size="11" class="bold" fill="#4F46E5">📅 APPOINTMENT TRACKER</text>
+      
+      <text x="0" y="65" font-size="34" class="black" fill="#0F172A">My Service Bookings</text>
+      <text x="0" y="95" font-size="14" class="regular" fill="#64748B">Real-time dispatch tracking, assigned technicians, and appointment management across Kabul.</text>
+      
+      <rect x="1000" y="35" width="200" height="46" rx="14" fill="#4F46E5"/>
+      <text x="1030" y="63" font-size="14" class="bold" fill="#FFFFFF">+ New Service Request</text>
+    </g>
+
+    <!-- Filter Tabs -->
+    <g transform="translate(120, 250)">
+      <rect width="90" height="36" rx="12" fill="#4F46E5"/>
+      <text x="24" y="23" font-size="13" class="bold" fill="#FFFFFF">All (2)</text>
+
+      <rect x="105" y="0" width="105" height="36" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text x="125" y="23" font-size="13" class="semi" fill="#475569">Active (1)</text>
+
+      <rect x="225" y="0" width="130" height="36" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text x="245" y="23" font-size="13" class="semi" fill="#475569">Completed (1)</text>
+
+      <rect x="370" y="0" width="125" height="36" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text x="390" y="23" font-size="13" class="semi" fill="#475569">Cancelled (0)</text>
+    </g>
+
+    <!-- Booking Cards -->
+    <g transform="translate(120, 310)">
+      <!-- Card 1: Confirmed / Active -->
+      <g transform="translate(0, 0)">
+        <rect width="1200" height="200" rx="20" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#card-shadow)"/>
+        
+        <g transform="translate(24, 24)">
+          <rect width="96" height="28" rx="8" fill="#EEF2FF"/>
+          <text x="12" y="19" font-size="12" class="black" fill="#4F46E5">KY-839214</text>
+          
+          <rect x="110" y="0" width="95" height="28" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="1"/>
+          <text x="124" y="19" font-size="12" class="bold" fill="#065F46">● Confirmed</text>
+        </g>
+        <text x="1050" y="44" font-size="12" class="semi" fill="#94A3B8">Booked Nov 09, 2026</text>
+
+        <!-- Booking details columns -->
+        <g transform="translate(24, 75)">
+          <text x="0" y="15" font-size="11" class="bold" fill="#94A3B8">ASSIGNED SPECIALIST</text>
+          <text x="0" y="38" font-size="16" class="bold" fill="#0F172A">Farhad Mohammad</text>
+          <text x="0" y="58" font-size="12" class="semi" fill="#64748B">Emergency Pipe Leak Repair</text>
+        </g>
+        <g transform="translate(380, 75)">
+          <text x="0" y="15" font-size="11" class="bold" fill="#94A3B8">SCHEDULE &amp; WINDOW</text>
+          <text x="0" y="38" font-size="14" class="bold" fill="#0F172A">📅 Tomorrow, Nov 11, 2026</text>
+          <text x="0" y="58" font-size="12" class="semi" fill="#64748B">⏰ Morning (09:00 AM - 12:00 PM)</text>
+        </g>
+        <g transform="translate(740, 75)">
+          <text x="0" y="15" font-size="11" class="bold" fill="#94A3B8">LOCATION &amp; RATE</text>
+          <text x="0" y="38" font-size="14" class="bold" fill="#0F172A">📍 Street 4, Wazir Akbar Khan</text>
+          <text x="0" y="58" font-size="12" class="bold" fill="#4F46E5">Rate: $35/hr</text>
+        </g>
+
+        <!-- Actions -->
+        <line x1="24" y1="150" x2="1176" y2="150" stroke="#F1F5F9"/>
+        <text x="24" y="178" font-size="12" class="semi" fill="#64748B">Client: <tspan class="bold" fill="#0F172A">Ahmad Shah</tspan> (0799123456)</text>
+        
+        <rect x="940" y="158" width="120" height="32" rx="8" fill="#F1F5F9"/>
+        <text x="955" y="179" font-size="12" class="bold" fill="#475569">Complete Job</text>
+
+        <rect x="1075" y="158" width="105" height="32" rx="8" fill="#FEF2F2"/>
+        <text x="1090" y="179" font-size="12" class="bold" fill="#DC2626">Cancel Request</text>
+      </g>
+
+      <!-- Card 2: Completed -->
+      <g transform="translate(0, 230)">
+        <rect width="1200" height="180" rx="20" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#card-shadow)"/>
+        <g transform="translate(24, 24)">
+          <rect width="96" height="28" rx="8" fill="#F1F5F9"/>
+          <text x="12" y="19" font-size="12" class="bold" fill="#64748B">KY-294810</text>
+          <rect x="110" y="0" width="100" height="28" rx="8" fill="#EEF2FF" stroke="#6366F1" stroke-width="1"/>
+          <text x="124" y="19" font-size="12" class="bold" fill="#4338CA">✓ Completed</text>
+        </g>
+        <text x="1050" y="44" font-size="12" class="semi" fill="#94A3B8">Nov 05, 2026</text>
+
+        <g transform="translate(24, 75)">
+          <text x="0" y="15" font-size="11" class="bold" fill="#94A3B8">ASSIGNED SPECIALIST</text>
+          <text x="0" y="38" font-size="16" class="bold" fill="#0F172A">Ahmad Tariq Rahimi</text>
+          <text x="0" y="58" font-size="12" class="semi" fill="#64748B">Circuit Breaker Replacement • Paid $80</text>
+        </g>
+        <g transform="translate(380, 75)">
+          <text x="0" y="15" font-size="11" class="bold" fill="#94A3B8">SCHEDULE &amp; WINDOW</text>
+          <text x="0" y="38" font-size="14" class="bold" fill="#0F172A">📅 Completed on Nov 05</text>
+        </g>
+        <g transform="translate(740, 75)">
+          <text x="0" y="15" font-size="11" class="bold" fill="#94A3B8">STATUS &amp; WARRANTY</text>
+          <text x="0" y="38" font-size="14" class="bold" fill="#10B981">✓ Work Inspected &amp; Guaranteed</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ======================================================== -->
+  <!-- ARTBOARD 4: ABOUT & CONTACT (X: 6150, Y: 100)           -->
+  <!-- ======================================================== -->
+  <g id="Frame_04_About_and_Contact" transform="translate(6150, 100)">
+    <rect width="1440" height="3200" rx="24" fill="#FAFAFC" filter="url(#card-shadow)"/>
+    <use href="#Navbar" x="0" y="0"/>
+    
+    <!-- About Section Header -->
+    <g transform="translate(120, 120)">
+      <rect width="150" height="28" rx="14" fill="#EEF2FF"/>
+      <text x="14" y="19" font-size="11" class="bold" fill="#4F46E5">🤝 ABOUT SERVILINK</text>
+      
+      <text x="0" y="65" font-size="34" class="black" fill="#0F172A">Building Kabul's Most Trusted Local Services Network</text>
+      <text x="0" y="95" font-size="14" class="regular" fill="#64748B">Founded to solve a critical urban challenge: how to quickly connect homes and offices with vetted, honest tradesmen.</text>
+    </g>
+
+    <!-- 4-Stage Verification Process -->
+    <g transform="translate(120, 260)">
+      <rect width="1200" height="420" rx="28" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#card-shadow)"/>
+      <text x="40" y="50" font-size="24" class="black" fill="#0F172A">Our 4-Stage Specialist Verification Process</text>
+      <text x="40" y="76" font-size="13" class="regular" fill="#64748B">Fewer than 18% of technicians who apply are admitted into the ServiLink network.</text>
+      
+      <g transform="translate(40, 110)">
+        <!-- Stage 1 -->
+        <g transform="translate(0, 0)">
+          <rect width="260" height="260" rx="18" fill="#F8FAFC" stroke="#E2E8F0"/>
+          <rect x="20" y="20" width="85" height="26" rx="6" fill="#EEF2FF"/>
+          <text x="28" y="38" font-size="11" class="black" fill="#4F46E5">STAGE 01</text>
+          <text x="20" y="80" font-size="16" class="bold" fill="#0F172A">National ID &amp; Police Clearance</text>
+          <text x="20" y="115" font-size="12" class="regular" fill="#64748B">Verification of Afghan National Electronic Tazkira, police clear record, and local community references.</text>
+        </g>
+        <!-- Stage 2 -->
+        <g transform="translate(285, 0)">
+          <rect width="260" height="260" rx="18" fill="#F8FAFC" stroke="#E2E8F0"/>
+          <rect x="20" y="20" width="85" height="26" rx="6" fill="#EEF2FF"/>
+          <text x="28" y="38" font-size="11" class="black" fill="#4F46E5">STAGE 02</text>
+          <text x="20" y="80" font-size="16" class="bold" fill="#0F172A">Practical Skill &amp; Tool Testing</text>
+          <text x="20" y="115" font-size="12" class="regular" fill="#64748B">Hands-on diagnostic testing on real equipment (multimeters, pressure pumps) by senior master tradesmen.</text>
+        </g>
+        <!-- Stage 3 -->
+        <g transform="translate(570, 0)">
+          <rect width="260" height="260" rx="18" fill="#F8FAFC" stroke="#E2E8F0"/>
+          <rect x="20" y="20" width="85" height="26" rx="6" fill="#EEF2FF"/>
+          <text x="28" y="38" font-size="11" class="black" fill="#4F46E5">STAGE 03</text>
+          <text x="20" y="80" font-size="16" class="bold" fill="#0F172A">Ethics &amp; Etiquette Training</text>
+          <text x="20" y="115" font-size="12" class="regular" fill="#64748B">Training in punctuality, cleanliness (wearing boot covers, cleanup), and upfront invoice itemization.</text>
+        </g>
+        <!-- Stage 4 -->
+        <g transform="translate(855, 0)">
+          <rect width="260" height="260" rx="18" fill="#F8FAFC" stroke="#E2E8F0"/>
+          <rect x="20" y="20" width="85" height="26" rx="6" fill="#EEF2FF"/>
+          <text x="28" y="38" font-size="11" class="black" fill="#4F46E5">STAGE 04</text>
+          <text x="20" y="80" font-size="16" class="bold" fill="#0F172A">$2,500 Damage Insurance</text>
+          <text x="20" y="115" font-size="12" class="regular" fill="#64748B">All approved specialists operate under ServiLink's liability protection policy for client premises safety.</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Contact & 24/7 Dispatch Control Hub -->
+    <g transform="translate(120, 720)">
+      <rect width="1200" height="520" rx="28" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#card-shadow)"/>
+      
+      <!-- Left: Contact Form -->
+      <g transform="translate(40, 40)">
+        <text x="0" y="30" font-size="22" class="black" fill="#0F172A">Send Our Central Dispatch a Message</text>
+        <text x="0" y="55" font-size="13" class="regular" fill="#64748B">Customer service representatives respond in under 2 hours.</text>
+        
+        <!-- Form Fields -->
+        <g transform="translate(0, 80)">
+          <rect width="260" height="46" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+          <text x="14" y="28" font-size="13" class="regular" fill="#94A3B8">Full Name</text>
+
+          <rect x="280" y="0" width="260" height="46" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+          <text x="294" y="28" font-size="13" class="regular" fill="#94A3B8">Phone (0799123456)</text>
+        </g>
+
+        <g transform="translate(0, 140)">
+          <rect width="540" height="46" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+          <text x="14" y="28" font-size="13" class="regular" fill="#94A3B8">Email Address (name@example.com)</text>
+        </g>
+
+        <g transform="translate(0, 200)">
+          <rect width="540" height="46" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+          <text x="14" y="28" font-size="13" class="regular" fill="#94A3B8">Subject of Inquiry</text>
+        </g>
+
+        <g transform="translate(0, 260)">
+          <rect width="540" height="90" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+          <text x="14" y="28" font-size="13" class="regular" fill="#94A3B8">Describe your service inquiry or issue in detail...</text>
+        </g>
+
+        <g transform="translate(0, 365)">
+          <rect width="200" height="46" rx="12" fill="#4F46E5"/>
+          <text x="45" y="28" font-size="14" class="bold" fill="#FFFFFF">Send Message →</text>
+        </g>
+      </g>
+
+      <!-- Right: Direct Emergency Contact & FAQ -->
+      <g transform="translate(640, 40)">
+        <g transform="translate(0, 0)">
+          <rect width="500" height="150" rx="20" fill="#4F46E5"/>
+          <text x="30" y="40" font-size="12" class="black" fill="#A7F3D0">24/7 EMERGENCY DISPATCH HOTLINE</text>
+          <text x="30" y="80" font-size="28" class="black" fill="#FFFFFF">+93 79 123 4567</text>
+          <text x="30" y="115" font-size="13" class="semi" fill="#E0E7FF">Average phone pickup under 30 seconds • 22 Kabul districts</text>
+        </g>
+
+        <!-- Hub Address -->
+        <g transform="translate(0, 175)">
+          <rect width="500" height="100" rx="18" fill="#F8FAFC" stroke="#E2E8F0"/>
+          <text x="24" y="35" font-size="14" class="bold" fill="#0F172A">📍 Kabul Central Operations Control</text>
+          <text x="24" y="60" font-size="13" class="regular" fill="#64748B">Charahi Ansari, Shahr-e Naw, District 10, Kabul, AF</text>
+          <text x="24" y="80" font-size="12" class="semi" fill="#4F46E5">support@servilink.af</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

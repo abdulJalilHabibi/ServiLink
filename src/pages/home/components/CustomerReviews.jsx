@@ -61,8 +61,8 @@ export const CustomerReviews = () => {
           </p>
         </div>
 
-        {/* 3 Balanced Cards Grid: 1 col on mobile, 3 equal columns on tablet and desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
+        {/* Cards Grid: 1 col on mobile & tablet (vertical stack), 3 cols on desktop */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-6 max-w-2xl lg:max-w-none mx-auto">
           {reviews.map((rev, idx) => (
             <motion.div
               key={rev.id}
@@ -71,45 +71,48 @@ export const CustomerReviews = () => {
               viewport={{ once: true, margin: "-20px" }}
               transition={{ duration: 0.35, delay: idx * 0.1 }}
               whileHover={{ y: -3 }}
-              className="bg-[#FAFAFC] rounded-2xl border border-slate-200/80 p-4 sm:p-5 lg:p-6 shadow-xs hover:shadow-md transition flex flex-col justify-between"
+              className="bg-[#FAFAFC] rounded-2xl border border-slate-200/80 p-5 sm:p-6 shadow-xs hover:shadow-md transition flex flex-col justify-between"
             >
               <div>
-                {/* Rating & Date */}
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center text-amber-400 gap-0.5">
-                    {Array.from({ length: rev.rating }).map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-amber-400" />
-                    ))}
+                {/* 1. Reviewer Info: Photo, Name, Location & Date */}
+                <div className="flex items-start justify-between gap-3 mb-3.5">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <img
+                      src={rev.avatar}
+                      alt={rev.name}
+                      className="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover ring-2 ring-slate-200 shrink-0 shadow-2xs"
+                      loading="lazy"
+                    />
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-sm sm:text-base font-bold text-slate-900 leading-tight">
+                        {rev.name}
+                      </h3>
+                      <p className="text-[11px] sm:text-xs text-slate-500 leading-snug mt-0.5">
+                        {rev.location}
+                      </p>
+                    </div>
                   </div>
-                  <span className="text-[11px] font-semibold text-slate-400">{rev.date}</span>
+                  <span className="text-[11px] font-semibold text-slate-400 shrink-0 mt-0.5">
+                    {rev.date}
+                  </span>
                 </div>
 
-                {/* Comment */}
+                {/* 2. Rating Stars */}
+                <div className="flex items-center text-amber-400 gap-0.5 mb-3">
+                  {Array.from({ length: rev.rating }).map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+
+                {/* 3. Review Description / Comment */}
                 <p className="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-4">
                   "{rev.comment}"
                 </p>
               </div>
 
-              {/* Reviewer & Service Info */}
+              {/* 4. Booked Service Badge */}
               <div className="pt-3.5 border-t border-slate-200/70">
-                <div className="flex items-center gap-2.5 sm:gap-3">
-                  <img
-                    src={rev.avatar}
-                    alt={rev.name}
-                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover ring-2 ring-slate-200 shrink-0"
-                  />
-                  <div className="min-w-0 flex-1">
-                    <div className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">
-                      {rev.name}
-                    </div>
-                    <div className="text-[10px] sm:text-[11px] text-slate-500 leading-snug mt-0.5">
-                      {rev.location}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Service Tag - Wraps cleanly with no ellipsis truncation */}
-                <div className="mt-3 text-[11px] text-indigo-700 bg-indigo-50/80 border border-indigo-100/60 px-2.5 py-1.5 rounded-lg leading-snug">
+                <div className="text-[11px] text-indigo-700 bg-indigo-50/80 border border-indigo-100/60 px-3 py-2 rounded-xl leading-snug">
                   <div className="font-semibold text-slate-900">{rev.service}</div>
                   <div className="text-[10px] text-indigo-600 font-medium mt-0.5">
                     Pro: <span className="font-semibold">{rev.proName}</span>
