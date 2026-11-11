@@ -70,25 +70,25 @@ export const HeroSection = () => {
             >
               <form
                 onSubmit={handleSearchSubmit}
-                className="bg-[#F8FAFC] rounded-2xl md:rounded-full p-2 border border-slate-200/90 shadow-sm flex flex-col md:flex-row items-stretch md:items-center gap-2 max-w-2xl mx-auto"
+                className="bg-white rounded-2xl md:rounded-full p-2 border border-slate-200/90 shadow-md shadow-slate-200/50 flex flex-col md:flex-row items-stretch md:items-center gap-2 max-w-3xl mx-auto"
               >
                 {/* Keyword Search Input */}
-                <div className="flex-1 flex items-center px-3.5 py-2">
+                <div className="flex flex-1 min-w-0  items-center px-4 py-2">
                   <Search className="w-4 h-4 text-slate-400 shrink-0 mr-2.5" />
                   <input
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="What help do you need? (e.g. Electrician, Plumber)"
-                    className="w-full bg-transparent text-sm text-slate-900 placeholder-slate-400 focus:outline-none font-medium"
+                    placeholder="What help do you need?"
+                    className="w-full bg-transparent text-sm text-slate-900 placeholder-slate-400 focus:outline-none font-medium pr-3"
                   />
                 </div>
 
                 {/* Divider on tablet/desktop */}
-                <div className="hidden md:block w-px h-6 bg-slate-300 shrink-0" />
+                <div className="hidden md:block w-px h-6 bg-slate-200 shrink-0 mx-1" />
 
                 {/* City / Region Dropdown */}
-                <div className="flex items-center px-3 py-2 border-t md:border-t-0 border-slate-200">
+                <div className="flex items-center px-3 py-2 border-t md:border-t-0 border-slate-200 shrink-0">
                   <MapPin className="w-4 h-4 text-slate-400 shrink-0 mr-2" />
                   <select
                     value={selectedCity}
@@ -107,7 +107,7 @@ export const HeroSection = () => {
                 {/* Action Button */}
                 <button
                   type="submit"
-                  className="w-full md:w-auto bg-[#4F46E5] hover:bg-[#4338CA] text-white font-bold px-6 py-2.5 rounded-xl md:rounded-full shadow-md shadow-indigo-500/20 transition duration-150 flex items-center justify-center gap-1.5 text-sm whitespace-nowrap active:scale-95 cursor-pointer"
+                  className="w-full md:w-auto bg-[#4F46E5] hover:bg-[#4338CA] text-white font-bold px-6 py-2.5 rounded-xl md:rounded-full shadow-md shadow-indigo-500/20 transition duration-150 flex items-center justify-center gap-1.5 text-sm whitespace-nowrap active:scale-95 cursor-pointer shrink-0"
                 >
                   <span>Search Pros</span>
                   <ArrowRight className="w-4 h-4" />

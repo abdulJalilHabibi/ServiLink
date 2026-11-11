@@ -95,9 +95,18 @@ export const CategoryGrid = () => {
                   <span className="text-emerald-600 font-bold">
                     From ${cat.startingPrice}/hr
                   </span>
-                  <span className="text-slate-300 group-hover:text-indigo-600 group-hover:translate-x-1 transition-all">
-                    <ArrowRight className="w-4 h-4" />
-                  </span>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleCategoryClick(cat.id);
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-600 text-indigo-700 hover:text-white font-bold text-xs transition-all active:scale-95 cursor-pointer shadow-2xs group-hover:bg-indigo-600 group-hover:text-white"
+                    aria-label={`Browse ${cat.name} Pros`}
+                  >
+                    <span>Browse Pros</span>
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+                  </button>
                 </div>
               </motion.div>
             );
